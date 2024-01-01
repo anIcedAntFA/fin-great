@@ -23,3 +23,6 @@ m_up:
 m_down:
 	# run migrate down
 	migrate -path db/migrations -database "postgres://root:secret@localhost:5432/fingreat_db?sslmode=disable" down
+
+sqlc:
+	sqlc generate
