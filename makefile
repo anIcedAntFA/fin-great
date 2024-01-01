@@ -14,7 +14,7 @@ db_up:
 	docker exec -it fingreat_postgres createdb --username=root --owner=root fingreat_db
 
 db_down:
-	docker exec -it fingreat_postgres dropdb --username=root  fingreat_db
+	docker exec -it fingreat_postgres dropdb --username=root fingreat_db
 
 m_up:
 	# run migrate up
