@@ -26,3 +26,9 @@ m_down:
 
 sqlc:
 	sqlc generate
+
+start:
+	CompileDaemon -command="./fingreat-server"
+
+test:
+	go test -v -cover ./...

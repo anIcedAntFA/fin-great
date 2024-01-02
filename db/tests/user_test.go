@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	db "github.com/anIcedAntFA/fin-great/db/sqlc"
-	"github.com/anIcedAntFA/fin-great/utils"
+	db "github.com/anIcedAntFA/fingreat-server/db/sqlc"
+	"github.com/anIcedAntFA/fingreat-server/utils"
 	"github.com/stretchr/testify/assert"
 )
 
