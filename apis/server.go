@@ -23,7 +23,7 @@ func NewServer(envPath string) *Server {
 		panic(fmt.Sprintf("could not load env config: %v", err))
 	}
 
-	conn, err := sql.Open(config.DBdriver, config.DB_source)
+	conn, err := sql.Open(config.DBdriver, config.DB_source_live)
 
 	if err != nil {
 		panic(fmt.Sprintf("could not connect to database: %v", err))
@@ -49,6 +49,8 @@ func (s *Server) Start(port int) {
 			},
 		)
 	})
+
+	User{}.router(s)
 
 	s.router.Run(fmt.Sprintf(":%v", port))
 }
